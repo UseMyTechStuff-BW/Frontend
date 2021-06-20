@@ -1,4 +1,4 @@
-![PNG screenshot](https://lucid.app/publicSegments/view/d3d49bdd-5da3-4c1a-a41b-94f580b787c0/image.png)
+![PNG screenshot](https://lucid.app/publicSegments/view/9a59afb0-fc2a-4744-b756-9b52f7b6d1ce/image.png)
 
 # Frontend
 
