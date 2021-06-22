@@ -2,7 +2,7 @@
 
 # Frontend
 
-## ☝️ Proposal...
+## ☝️ Proposal... 
 
 **What problem does your app solve?**
 - 
