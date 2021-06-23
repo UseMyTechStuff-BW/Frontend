@@ -1,6 +1,5 @@
 import './App.css';
-import AddEquipmentForm from "./components/AddEquipmentForm";
-import { Link } from 'react-router-dom'
+
 
 function App() {
   return (
@@ -13,6 +12,24 @@ function App() {
       alt="tech stuff"
       /></Link>
       <h1 className="mainHeading">Use My Tech Stuff</h1>
+
+    <BrowserRouter>
+      <Switch>
+
+        <Route path = '/marketplace'>
+          <MarketplaceHome/>
+        </Route>
+
+        <Route path = '/marketplace/:id'>
+          <MarketItem/>
+        </Route>
+
+        {/* <Route path = '/renter/cart'>
+          <Cart/>
+        </Route> */}
+
+      </Switch>
+    </BrowserRouter>
     </div>
     <nav>
       <Link to='/login'>Login</Link>
