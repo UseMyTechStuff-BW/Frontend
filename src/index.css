@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 html {
 	height:100vh;
-	background-image: linear-gradient(160deg, #708C8E 0%, #EBF3F3 100%);
+	background-image: linear-gradient(160deg, white 0%, lightgrey 100%);
 	background-repeat: no-repeat;
 	font-family: 'Balsamiq Sans', cursive;
 }
@@ -53,6 +53,8 @@ table {
 	border-spacing: 0;
 }
 
+/* Header */
+
 .logo {
 	height: 6rem;
 	top: 1rem;
@@ -68,4 +70,133 @@ table {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+}
+
+header {
+	background-color: lightgrey;
+	box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+	0 2px 4px rgba(0, 0, 0, 0.25);
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	font-family: 'Roboto', sans-serif;
+}
+
+nav a {
+	color: white;
+	padding: 10px;
+	text-decoration: none;
+	font-size: 20px;
+	margin-left: 3px;
+	margin-right: 5px;
+	border-radius: 5px;
+	box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+	0 2px 4px rgba(0, 0, 0, 0.25);
+	font-family: 'Roboto', sans-serif;
+}
+
+nav a:hover {
+	color: black;
+	background-color: white;
+}
+
+/* Add Item form */
+
+.addItemForm {
+	display: flex;
+  flex-direction: column;
+  box-shadow: 0 -1px 0 #ffffff, 0 0 4px rgba(0, 0, 0, 0.12),
+  0 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  width: 60%;
+  margin: auto;
+  border-radius: 6px;
+  background-color: white;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.addItemForm h2 {
+	text-align: center;
+	margin-bottom: 20px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.addNew-Input {
+	padding: 5px;
+}
+
+.addNew-label {
+  display: flex;
+  margin-bottom: 16px;
+  justify-content: space-between;
+  color: black;
+	font-family: 'Roboto', sans-serif;
+}
+
+/* items title */
+
+.myItem-title {
+	background-color: black;
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	padding: 10px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.subTitle {
+	background-color: #546f9c;
+	font-size: 20px;
+	padding: 5px;
+	text-align: center;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+/* Item card */
+
+.item-card {
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  width: 60%;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.item-card h3 {
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 6px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.item-card button {
+  background-color: #f7594d;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.item-card img {
+  height: 200px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+@media only screen and (max-width: 600px) {
+  .item-card {
+    display: flex;
+    flex-direction: column;
+  }
 }
