@@ -3,6 +3,7 @@ import { Switch, Route, Link } from 'react-router-dom'
 import MarketplaceHome from './components/Marketplace/MarketplaceHome'
 import MarketItem from './components/Marketplace/MarketItem'
 import Home from './components/Home'
+import AddEquipmentForm from './components/AddEquipmentForm'
 
 function App() {
   return (
@@ -14,10 +15,10 @@ function App() {
       src="https://dcassetcdn.com/design_img/501499/151249/151249_3571586_501499_thumbnail.jpg"
       alt="tech stuff"
       /></Link>
-      <h1 className="mainHeading">Use My Tech Stuff</h1>
     </div>
 
     <nav>
+      <Link to='/my-equipment'>My Stuff</Link>
       <Link to='/login'>Login</Link>
       <Link to='/register'>Register</Link>
     </nav>
@@ -36,9 +37,14 @@ function App() {
           <Cart/>
         </Route> */}
 
-        <Route path='/'>
+        <Route exact path='/'>
           <Home />
         </Route>
+
+        <Route exact path='/my-equipment'>
+          <AddEquipmentForm />
+        </Route>
+
      </Switch>
 
     </>
