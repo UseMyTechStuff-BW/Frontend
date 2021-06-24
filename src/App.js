@@ -1,7 +1,8 @@
 import './App.css';
-import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom'
 import MarketplaceHome from './components/Marketplace/MarketplaceHome'
 import MarketItem from './components/Marketplace/MarketItem'
+import Home from './components/Home'
 
 function App() {
   return (
@@ -14,10 +15,15 @@ function App() {
       alt="tech stuff"
       /></Link>
       <h1 className="mainHeading">Use My Tech Stuff</h1>
+    </div>
 
-    <BrowserRouter>
-      <Switch>
+    <nav>
+      <Link to='/login'>Login</Link>
+      <Link to='/register'>Register</Link>
+    </nav>
+    </header>
 
+    <Switch>
         <Route path = '/marketplace'>
           <MarketplaceHome/>
         </Route>
@@ -25,18 +31,15 @@ function App() {
         <Route path = '/marketplace/:id'>
           <MarketItem/>
         </Route>
+
         {/* <Route path = '/renter/cart'>
           <Cart/>
         </Route> */}
 
-      </Switch>
-    </BrowserRouter>
-    </div>
-    <nav>
-      <Link to='/login'>Login</Link>
-      <Link to='/register'>Register</Link>
-    </nav>
-    </header>
+        <Route path='/'>
+          <Home />
+        </Route>
+     </Switch>
 
     </>
   );
