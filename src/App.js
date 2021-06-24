@@ -1,5 +1,7 @@
 import './App.css';
-
+import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
+import MarketplaceHome from './components/Marketplace/MarketplaceHome'
+import MarketItem from './components/Marketplace/MarketItem'
 
 function App() {
   return (
@@ -23,7 +25,6 @@ function App() {
         <Route path = '/marketplace/:id'>
           <MarketItem/>
         </Route>
-
         {/* <Route path = '/renter/cart'>
           <Cart/>
         </Route> */}
