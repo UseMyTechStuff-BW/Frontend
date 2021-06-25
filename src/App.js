@@ -4,6 +4,8 @@ import MarketplaceHome from './components/Marketplace/MarketplaceHome'
 import MarketItem from './components/Marketplace/MarketItem'
 import Home from './components/Home'
 import AddEquipmentForm from './components/AddEquipmentForm'
+import Newuser from "./register";
+import Login from './login'
 
 function App() {
   return (
@@ -43,6 +45,14 @@ function App() {
 
         <Route exact path='/my-equipment'>
           <AddEquipmentForm />
+        </Route>
+
+        <Route exact path='/register'>
+          <Newuser />
+        </Route>
+
+        <Route exact path ='/login'>
+          <Login />
         </Route>
 
      </Switch>
