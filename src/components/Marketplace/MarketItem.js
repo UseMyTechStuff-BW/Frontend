@@ -8,10 +8,10 @@ const Page = styled.div``
 
 const MarketItem = (props) => {
     const [item, setItem] = useState([]);
-    const { id } = useParams();
+    const { equipment_id } = useParams();
     const { push } = useHistory();
 
-    let itemId = id;
+    let itemId = equipment_id;
 
     useEffect(()=> {
         axios
@@ -38,6 +38,7 @@ const MarketItem = (props) => {
         <Page>
            <p>{item.name}</p>
            <p>{item.description}</p>
+           <img src={item.imgURl} alt='' width='200px' height='200px'></img>
            <button onClick={routeToCart}>Rent</button>
            <button onClick={routeToMarket}>Back to Marketplace</button>
         </Page>

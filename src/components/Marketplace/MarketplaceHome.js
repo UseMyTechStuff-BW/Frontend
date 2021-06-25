@@ -14,6 +14,7 @@ const MarketplaceHome = (props) => {
         axios.get(`https://usemytechstufflambda.herokuapp.com/api/equipment`)
         .then(response => {
             setItems(response.data)
+            console.log(response.data)
         })
         .catch(error => {
             console.log(error);

@@ -4,8 +4,15 @@ import MarketplaceHome from './components/Marketplace/MarketplaceHome'
 import MarketItem from './components/Marketplace/MarketItem'
 import Home from './components/Home'
 import AddEquipmentForm from './components/AddEquipmentForm'
+import Login from './components/Login/login'
+import PrivateRoute from './components/Login/PrivateRoute';
 
 function App() {
+
+
+  const isAuth = localStorage.getItem('token');
+
+
   return (
     <>
     <header>
@@ -18,31 +25,31 @@ function App() {
     </div>
 
     <nav>
-      <Link to='/my-equipment'>My Stuff</Link>
+      <Link to='/marketplace'>Items for Rent</Link> 
       <Link to='/login'>Login</Link>
       <Link to='/register'>Register</Link>
     </nav>
     </header>
 
     <Switch>
-        <Route path = '/marketplace'>
+        <Route exact path = '/marketplace'>
           <MarketplaceHome/>
         </Route>
 
-        <Route path = '/marketplace/:id'>
+        <Route path = '/marketplace/:equipment_id'>
           <MarketItem/>
         </Route>
-
-        {/* <Route path = '/renter/cart'>
-          <Cart/>
-        </Route> */}
 
         <Route exact path='/'>
           <Home />
         </Route>
 
-        <Route exact path='/my-equipment'>
+        <PrivateRoute exact path='/protected'>
           <AddEquipmentForm />
+        </PrivateRoute>
+
+        <Route path = '/login'>
+          <Login/>
         </Route>
 
      </Switch>
